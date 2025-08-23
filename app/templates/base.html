@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/main.css')}}"
+        />
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div>
+            NimWeb:
+            <a href="/index">Home</a>
+            <a href="/astro">Astro</a>
+            <a href="/elements">Elements</a>
+            <a href="/about">About</a>
+            <!-- <a href="/about"About</a> -->
+        </div>
+        <hr />
+        <div class="body_container">{% block body %}{% endblock %}</div>
+    </body>
+    <footer class="footer">
+        <hr style="color: greenyellow" />
+        <div style="margin: 5px">
+            contact me at
+            <a href="mailto:nimrodium@protonmail.com"
+                >nimrodium@protonmail.com
+            </a>
+        </div>
+    </footer>
+</html>
