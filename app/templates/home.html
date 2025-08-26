@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block body%}
+<div>
+    <h1>{{ title }}</h1>
+    <div>
+        <div>
+            <img src="{{ banner_url }}" alt="page banner">
+        </div>
+        <div>
+            {% for entry in gallery%}
+            <div>
+                <img src="{{ url_for() }}" alt="{{ entry.title }}">
+                <h2>{{ entry.title }}</h2>
+                <img src="" alt="">
+                <p>{{ entry.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
